@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="04b0", ATTRS{idProduct}=="0427", RUN+="/home/garza/copy-relay.sh"
+

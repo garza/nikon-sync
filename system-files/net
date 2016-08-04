@@ -1,0 +1,21 @@
+#config_eth0="192.168.2.46 netmask 255.255.255.0"
+routes_eth0="default via 192.168.2.1"
+dns_servers_eth0="192.168.2.1 8.8.8.8 8.8.4.4"
+config_eth0="192.168.2.46 netmask 255.255.255.0"
+#routes_eth0="default via 192.168.2.1"
+
+#config_eth0=( "noop" )
+dns_domain_lo="lg"
+
+modules_wlan0="!iwconfig !wpa_supplicant"
+config_wlan0="10.0.1.1 netmask 255.255.255.0"
+
+
+config_br0="192.168.50.1 netmask 255.255.255.0 brd 192.168.50.255"
+# no default route set for br0, leave forwarding etc. to shorewall
+# add the lan Ethernet port (enp4s1) only to br0
+# hostapd will add the WiFi adaptor (wlp1s0)
+#brctl_br0="setfd 0
+#sethello 10
+#stp off"
+#bridge_br0="eth0"
